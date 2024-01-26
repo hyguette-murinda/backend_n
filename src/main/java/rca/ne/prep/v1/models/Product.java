@@ -9,16 +9,16 @@ import jakarta.persistence.Id;
 public class Product {
     @Id
     @GeneratedValue( strategy = GenerationType.IDENTITY)
-    private long Id;
+    private long productId;
     private String name;
     private double price;
 
-    public long getId() {
-        return Id;
+    public long getProductId() {
+        return productId;
     }
 
-    public void setId(long id) {
-        Id = id;
+    public void setProductId(long productId) {
+        productId = productId;
     }
 
     public String getName() {

@@ -2,7 +2,6 @@ package rca.ne.prep.v1.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import rca.ne.prep.v1.models.Product;
@@ -19,7 +18,7 @@ public class ProductController {
         return new ResponseEntity<>(savedProduct, HttpStatus.CREATED);
     }
     @GetMapping("/{productId}")
-    public ResponseEntity<Product> getProductById(@PathVariable Long ProductId){
+    public ResponseEntity<Product> getProductById(@PathVariable Long productId){
         Product product = productService.getProductById(productId);
         return new ResponseEntity<>(product, HttpStatus.OK);
     }

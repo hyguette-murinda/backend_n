@@ -1,4 +1,10 @@
 package rca.ne.prep.v1.services;
 
-public class ProductService {
+import rca.ne.prep.v1.models.Product;
+
+import java.util.Optional;
+
+public interface ProductService {
+    Product registerProduct(Product product);
+    Optional getProductById(Long productId);
 }
