@@ -9,7 +9,7 @@ import java.util.List;
 public class Purchase {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long Id;
+    private long purchaseId;
     @ManyToOne
     private User user;
     @OneToMany(mappedBy = "purchase")
@@ -17,11 +17,11 @@ public class Purchase {
     private double totalPrice;
 
     public long getId() {
-        return Id;
+        return purchaseId;
     }
 
     public void setId(long id) {
-        Id = id;
+        purchaseId = id;
     }
 
     public User getUser() {
