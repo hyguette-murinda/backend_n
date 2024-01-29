@@ -6,6 +6,7 @@ import rca.ne.prep.v1.models.Product;
 import rca.ne.prep.v1.repositories.ProductRepository;
 import rca.ne.prep.v1.services.ProductService;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -18,8 +19,7 @@ public class ProductServiceImpl implements ProductService {
 
     }
     @Override
-    public Optional getProductById(Long productId){
-        return productRepository.findById(productId);
-
+    public List<Product> getAllProducts(){
+        return productRepository.findAll();
     }
 }

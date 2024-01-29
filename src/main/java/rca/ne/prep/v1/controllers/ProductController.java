@@ -7,19 +7,21 @@ import org.springframework.web.bind.annotation.*;
 import rca.ne.prep.v1.models.Product;
 import rca.ne.prep.v1.services.ProductService;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("api/products")
 public class ProductController {
     @Autowired
     private ProductService productService;
-    @postMapping
+    @PostMapping
     public ResponseEntity<Product> registerProduct(@RequestBody Product product){
         Product savedProduct = productService.registerProduct(product);
         return new ResponseEntity<>(savedProduct, HttpStatus.CREATED);
     }
-    @GetMapping("/{productId}")
-    public ResponseEntity<Product> getProductById(@PathVariable Long productId){
-        Product product = productService.getProductById(productId);
-        return new ResponseEntity<>(product, HttpStatus.OK);
+    @GetMapping
+    public ResponseEntity<List<Product>> getAllProducts(){
+        List<Product> products = productService.getAllProducts();
+        return new ResponseEntity<>(products, HttpStatus.OK);
     }
 }
