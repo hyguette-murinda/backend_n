@@ -4,7 +4,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import rca.ne.prep.v1.models.Purchase;
 import rca.ne.prep.v1.repositories.PurchaseRepository;
-import rca.ne.prep.v1.services.CartService;
 import rca.ne.prep.v1.services.PurchaseService;
 
 import java.util.List;

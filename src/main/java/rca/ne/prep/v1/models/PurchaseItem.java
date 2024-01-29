@@ -1,8 +1,16 @@
 package rca.ne.prep.v1.models;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @Entity
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
 public class PurchaseItem {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -13,35 +21,4 @@ public class PurchaseItem {
     @ManyToOne
     private Purchase purchase;
 
-    public long getId() {
-        return Id;
-    }
-
-    public void setId(long id) {
-        Id = id;
-    }
-
-    public Product getProduct() {
-        return product;
-    }
-
-    public void setProduct(Product product) {
-        this.product = product;
-    }
-
-    public int getQuantity() {
-        return quantity;
-    }
-
-    public void setQuantity(int quantity) {
-        this.quantity = quantity;
-    }
-
-    public Purchase getPurchase() {
-        return purchase;
-    }
-
-    public void setPurchase(Purchase purchase) {
-        this.purchase = purchase;
-    }
 }

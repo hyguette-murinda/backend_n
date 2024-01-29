@@ -1,11 +1,19 @@
 package rca.ne.prep.v1.models;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @Entity
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
 public class Purchase {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -16,35 +24,4 @@ public class Purchase {
     private List<PurchaseItem> purchaseItems = new ArrayList<>();
     private double totalPrice;
 
-    public long getId() {
-        return purchaseId;
-    }
-
-    public void setId(long id) {
-        purchaseId = id;
-    }
-
-    public User getUser() {
-        return user;
-    }
-
-    public void setUser(User user) {
-        this.user = user;
-    }
-
-    public List<PurchaseItem> getPurchaseItems() {
-        return purchaseItems;
-    }
-
-    public void setPurchaseItems(List<PurchaseItem> purchaseItems) {
-        this.purchaseItems = purchaseItems;
-    }
-
-    public double getTotalPrice() {
-        return totalPrice;
-    }
-
-    public void setTotalPrice(double totalPrice) {
-        this.totalPrice = totalPrice;
-    }
 }
