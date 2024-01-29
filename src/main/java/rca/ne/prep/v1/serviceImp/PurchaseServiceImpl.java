@@ -1,5 +1,6 @@
 package rca.ne.prep.v1.serviceImp;
 
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import rca.ne.prep.v1.models.Purchase;
@@ -9,9 +10,9 @@ import rca.ne.prep.v1.services.PurchaseService;
 import java.util.List;
 
 @Service
+@RequiredArgsConstructor
 public class PurchaseServiceImpl implements PurchaseService {
-    @Autowired
-    private PurchaseRepository purchaseRepository;
+    private final PurchaseRepository purchaseRepository;
 
     @Override
     public Purchase createPurchase(Purchase purchase) {
