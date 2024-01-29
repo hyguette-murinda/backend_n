@@ -21,7 +21,7 @@ public class PurchaseController {
         Purchase purchase1 = purchaseService.createPurchase(purchase);
         return new ResponseEntity<>(purchase1, HttpStatus.CREATED);
     }
-    @GetMapping("{/getPurchaseId}")
+    @GetMapping("/{purchaseId}")
     public ResponseEntity<Purchase> getPurchaseDetails(@PathVariable Long purchaseId){
         Purchase purchase = purchaseService.getPurchaseDetails(purchaseId);
         return new ResponseEntity<>(purchase, HttpStatus.OK);
