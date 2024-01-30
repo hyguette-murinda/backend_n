@@ -1,5 +1,4 @@
 package rca.ne.prep.v1.models;
-import  javax.*;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
