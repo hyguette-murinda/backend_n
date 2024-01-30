@@ -1,6 +1,7 @@
 package rca.ne.prep.v1.models;
 
-import jakarta.persistence.*;
+import javax.persistence.*;
+
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -21,6 +22,6 @@ public class Cart {
     @ManyToOne
     private User user;
     @OneToMany(mappedBy = "cart")
-    private List< CartItem> cartItems = new ArrayList<>();
+    private List<CartItem> cartItems = new ArrayList<>();
 
 }
