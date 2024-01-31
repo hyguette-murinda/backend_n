@@ -11,6 +11,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
+@RequestMapping("/api/purchaseItems")
 @RequiredArgsConstructor
 public class PurchaseItemController {
     private final PurchaseItemService purchaseItemService;
