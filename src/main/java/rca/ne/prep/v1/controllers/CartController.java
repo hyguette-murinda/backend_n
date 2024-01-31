@@ -28,7 +28,7 @@ public class CartController {
         List<Cart> cartItems = cartService.cartItems();
         return new ResponseEntity<>(cartItems, HttpStatus.OK);
     }
-    @GetMapping
+    @DeleteMapping
     public void removeAllCart(){
         cartService.removeAllCart();
     }
