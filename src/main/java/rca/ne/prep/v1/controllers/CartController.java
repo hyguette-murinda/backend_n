@@ -10,7 +10,7 @@ import rca.ne.prep.v1.services.CartService;
 import java.util.List;
 
 @RestController
-@RequestMapping("api/Cart")
+@RequestMapping("api/cart")
 @RequiredArgsConstructor
 public class CartController {
     private final CartService cartService;
@@ -23,7 +23,7 @@ public class CartController {
     public void removeCartWithId(@PathVariable Long cartId){
         cartService.removeCartWithId(cartId);
     }
-    @GetMapping
+    @GetMapping("/cart-items")
     public ResponseEntity<List<Cart>> cartItems(){
         List<Cart> cartItems = cartService.cartItems();
         return new ResponseEntity<>(cartItems, HttpStatus.OK);
