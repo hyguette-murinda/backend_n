@@ -8,12 +8,12 @@
 		<version>2.7.0</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>rw.gov.moh</groupId>
-	<artifactId>MOH_INSURANCE</artifactId>
+	<groupId>rca.ne.prep.v1</groupId>
+	<artifactId>JAVA_BACKEND</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
-	<name>MOH_INSURANCE</name>
-	<description>The Integrated Insurance System is a platform that revolutionizes the collaboration between health facilities, insurance institutions, and their members. This system establishes a unified network for seamless, real-time communication and data exchange. It streamlines insurance processes by automating claims, authorizations, and verifications, reducing paperwork and processing times. The system prioritizes data security and compliance, ensuring the confidentiality of member and provider information.</description>
+	<name>JAVA_BACKEND</name>
+	<description>java backend prep</description>
 	<properties>
 		<java.version>1.8</java.version>
 		<springfox.swagger.version>2.9.2</springfox.swagger.version>
