@@ -19,7 +19,7 @@ public class CartController {
         Cart cart1 = cartService.addCart(cart);
         return new ResponseEntity<>(cart1, HttpStatus.CREATED);
     }
-    @GetMapping("/{cartId}")
+    @DeleteMapping("/{cartId}")
     public void removeCartWithId(@PathVariable Long cartId){
         cartService.removeCartWithId(cartId);
     }

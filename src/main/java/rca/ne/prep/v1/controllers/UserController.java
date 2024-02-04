@@ -25,4 +25,8 @@ public class UserController {
         Optional<User> user = userService.findByUsername(username);
         return new ResponseEntity<>(user, HttpStatus.OK);
     }
+    @DeleteMapping("/{userId}")
+    public void deleteUserById(@PathVariable Long userId){
+        userService.deleteUserById(userId);
+    }
 }
