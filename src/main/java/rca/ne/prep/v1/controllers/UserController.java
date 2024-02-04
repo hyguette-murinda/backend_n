@@ -29,4 +29,9 @@ public class UserController {
     public void deleteUserById(@PathVariable Long userId){
         userService.deleteUserById(userId);
     }
+    @PutMapping("/{username}")
+    public ResponseEntity<User> changeUserPassword(@PathVariable String username, String password){
+        User user = userService.changeUserPassword(username, password);
+        return new ResponseEntity<>(user, HttpStatus.ACCEPTED);
+    }
 }

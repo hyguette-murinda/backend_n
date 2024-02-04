@@ -8,4 +8,5 @@ public interface UserService {
     User registerUser(User user);
     Optional<User> findByUsername(String username);
     void deleteUserById(Long userId);
+    User changeUserPassword(String username, String password);
 }
