@@ -2,6 +2,7 @@ package rca.ne.prep.v1.serviceImp;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import rca.ne.prep.v1.dto.requests.CreateUserDto;
 import rca.ne.prep.v1.models.User;
 import rca.ne.prep.v1.repositories.UserRepository;
 import rca.ne.prep.v1.services.UserService;
@@ -14,8 +15,11 @@ public class UserServiceImpl implements UserService {
     private final UserRepository userRepository;
 
     @Override
-    public User registerUser(User user){
-        return userRepository.save(user);
+    public User registerUser(CreateUserDto user){
+        User user1=new User();
+        user1.setUsername(user.getUserName());
+        user1.setPassword(user.getPassword());
+        return userRepository.save(user1);
     }
     @Override
     public Optional<User> findByUsername(String username){
