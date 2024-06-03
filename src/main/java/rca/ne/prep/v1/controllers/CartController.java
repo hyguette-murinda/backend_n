@@ -4,6 +4,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import rca.ne.prep.v1.dto.requests.CreateCartDto;
 import rca.ne.prep.v1.models.Cart;
 import rca.ne.prep.v1.services.CartService;
 
@@ -15,7 +16,7 @@ import java.util.List;
 public class CartController {
     private final CartService cartService;
     @PostMapping
-    public ResponseEntity<Cart> addCart(@RequestBody Cart cart){
+    public ResponseEntity<Cart> addCart(@RequestBody CreateCartDto cart){
         Cart cart1 = cartService.addCart(cart);
         return new ResponseEntity<>(cart1, HttpStatus.CREATED);
     }
