@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import rca.ne.prep.v1.dto.requests.CreatePurchaseDto;
 import rca.ne.prep.v1.models.Purchase;
 import rca.ne.prep.v1.services.PurchaseService;
 
@@ -17,7 +18,7 @@ public class PurchaseController {
     private final PurchaseService purchaseService;
 
     @PostMapping
-    public ResponseEntity<Purchase> createPurchase(@RequestBody Purchase purchase){
+    public ResponseEntity<Purchase> createPurchase(@RequestBody CreatePurchaseDto purchase){
         Purchase purchase1 = purchaseService.createPurchase(purchase);
         return new ResponseEntity<>(purchase1, HttpStatus.CREATED);
     }
