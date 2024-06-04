@@ -1,4 +1,4 @@
-package rw.ac.rca.spring_boot_template.configs;
+package rca.ne.prep.v1.configuration;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import jakarta.servlet.ServletOutputStream;
